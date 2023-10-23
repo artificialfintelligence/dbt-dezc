@@ -47,7 +47,7 @@ from tripdata
 
 where rn = 1
 
--- Override with: `dbt build -m <model_name.sql> --var 'is_test_run: false'`
+-- Override with `--vars 'is_test_run: false'` in `dbt run` or `dbt build`
 {% if var('is_test_run', default=true) -%}
 
   limit 100
